@@ -18,7 +18,7 @@ $ npm install connect-locals
 var locals = require( 'connect-locals' );
 ```
 
-#### locals()
+#### locals( request, response, next )
 
 [Connect](https://github.com/senchalabs/connect)/[Express](http://expressjs.com/) middleware which appends a locals `object` for scoped request variables.
 
@@ -39,6 +39,7 @@ app.use( locals );
 	var app = require( 'express' )();
 
 	app.use( locals );
+	app.use( logger );
 	app.get( '/', main );
 	app.get( '/foo', foo );
 	app.get( '/bar', bar );
