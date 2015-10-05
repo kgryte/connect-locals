@@ -1,6 +1,6 @@
 {
   "name": "connect-locals",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Connect middleware which appends a locals object for scoped request variables.",
   "author": {
     "name": "Athan Reines",
