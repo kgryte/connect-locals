@@ -26,6 +26,14 @@ var locals = require( 'connect-locals' );
 var app = require( 'express' )();
 
 app.use( locals );
+app.use( mw );
+
+function mw( req, res, next ) {
+	// Append data to the `locals` object... 
+	req.locals.data = 'beep';
+	
+	next();
+}
 ```
 
 ## Notes
